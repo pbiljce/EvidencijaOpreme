@@ -1,0 +1,636 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+#wrapper{
+    display: grid;
+}
+
+/* LOGIN form*/
+.loginContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#003d66, #005c99);
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 2em;
+    margin: 1em;
+}
+.login-form input[type="text"], .login-form input[type="password"]{
+    border: 1px solid #d9d9d9;
+    padding-left: 35px;
+}
+.login-form input[type="text"]:hover, .login-form input[type="password"]:hover{
+    border: 1px solid #bfbfbf;
+}
+.login-header h1{
+    text-transform: uppercase;
+    color: #000000;
+    font-size: large;
+    font-weight: normal;
+    text-align: center;
+}
+.login-input{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login-input input{
+    padding: 0.7em;
+    margin: 0.7em 0;
+}
+.login-input img{
+    position: absolute;
+    width: 20px;
+    left: 2%;
+}
+.login-input img[alt="Korisnik"]{
+    top:12%;
+}
+.login-input img[alt="Lozinka"]{
+    top:44.5%;
+}
+.line{
+    border: thin solid #fff;
+}
+.loginMessage{
+    text-align: center;
+    color: #ff704d;
+}
+
+/*LOGIN BUTTON*/
+.loginbutton{
+    background-color: #003d66;
+    color: #fff;
+    border: 1px solid #004d80;
+    text-transform: uppercase;
+    font-size: small;
+}
+.loginbutton:hover{
+    opacity: 0.9;
+}
+
+/*BUTTONS*/
+.button{
+    color: #000000;
+    padding: 0.3em 1em;
+    box-shadow: 0 4px 0 0 #8c8c8c;
+    border: 0;
+    border-radius: 0.5em;
+    background-color:#e6e6e6;
+    margin: 0.3em;
+    transition: box-shadow 100ms ease-in-out;
+} 
+.button:active{
+    box-shadow: none;
+    background-color:#d9d9d9;
+}
+.button:hover{
+    background-color:#d9d9d9;
+}
+
+.button.red{
+    box-shadow: 0 4px 0 0 #ff704d;
+    background-color:#ffad99;
+} 
+.button:active.red{
+    box-shadow: none;
+    background-color:#ffc2b3;
+}
+.button:hover.red{
+    background-color:#ffc2b3;
+}
+.button.blue{
+    box-shadow: 0 4px 0 0 #4d88ff;
+    background-color:#b3c6ff;
+} 
+.button:active.blue{
+    box-shadow: none;
+    background-color:#b3ccff;
+}
+.button:hover.blue{
+    background-color:#b3ccff;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* FORM INPUT*/
+form input[type="text"], form select, form input[type="password"]{
+    border: 1px solid #d9d9d9;
+}
+form input[type="text"]:hover, form select:hover, form input[type="password"]:hover{
+    border: 1px solid #bfbfbf;
+}
+
+/*https://www.w3docs.com/snippets/css/how-to-create-a-placeholder-for-an-html5-select-box-by-using-only-html-and-css.html*/
+select:required:invalid {
+    color: #737373;
+}
+option[value=""][disabled] {
+    display: none;
+}
+option {
+    color: black;
+}
+
+/* SECTION TITLE*/
+.section-title{
+    padding: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+ }
+.bottom{
+    background-color: #004d80;
+    color: white;
+ }
+.middle{
+    background-color: #e6e6e6;
+    color: #000000;
+    border-bottom: 3px solid #003d66;
+    margin-top: 0.5%;
+    /*margin-bottom: 1%;*/
+ }
+.light{
+    background-color: #ffffff;
+    color: #000000;
+}
+ .center{
+    border: 1px solid #cccccc;
+    color: #003d66;
+    margin: 1%;
+ }
+
+/*MAIN HEADER*/
+.main-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* TOP HEADER */
+.top-header{
+    background-image: linear-gradient(#003d66, #005c99);
+    padding: 1em;
+}
+.top-header a{
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+.top-header img{
+    /*max-width: 3%;*/
+    vertical-align: middle;
+}
+
+/*MENU*/
+.main-navigation {
+    display: flex;
+    justify-content: space-between;
+    background-color: #003d66;
+    font-size: 0;
+}
+.main-navigation ul{
+    padding: 0;
+    margin: 0;
+}
+.main-navigation li{
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0.8em 2em;
+    font-size: 0.9rem;
+}
+.main-navigation li:hover{
+    background-color: #333;
+}
+
+/* MAIN CONTENT*/
+.main-content{
+    display: flex;
+    flex-direction: column;
+}
+/* MAIN CONTENT - SECTION ONE*/
+.section-one{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    /*margin-top: 8%;*/
+}
+.section-one-left{
+    flex-grow: 1;
+}
+.section-one-left form{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    font-size: 0.9em;
+    border: 1px solid #d9d9d9;
+    padding: 1em;
+}
+.section-one-left form input, .section-one-left form select{
+    margin: 0.3em 0;
+    padding: 0.3em;
+}
+.section-one-left .form-header{
+    background-color: #e6e6e6;
+    padding: 0.6em;
+    margin-bottom: 1em;
+    color: #000000;
+    text-align: center;
+}
+.section-one-right{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+/*MAIN CONTENT - SECTION TWO*/
+.section-two{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    font-size: 0.9em;
+}
+.table-form{
+   display: flex;
+   flex-direction: row;
+   margin: 1em;
+}
+.search{
+    width: 100%;
+    height: 5vh;
+    /*margin: 1em 0 1em 0;*/
+    font-style: italic;
+}
+.table table,.table table tr{ 
+   border-bottom: 1px solid #d9d9d9; 
+   border-collapse: collapse;
+   width: 100%;
+}
+.table table td,.table table th{ 
+   padding: 0.2em;
+   text-align: center;
+   font-weight: normal;
+}
+.table table tr:hover{ 
+  background-color: #f2f2f2;
+}
+.table table th{ 
+   color: #003d66;
+   background-color:#d9d9d9;
+   text-transform: uppercase;
+}
+.table table td:last-child{ 
+   text-align: right;
+}
+ 
+@media screen and (max-width: 1100px) {  
+    .section-one{
+        flex-direction: column;
+    } 
+    .table-form{
+        flex-direction: column;
+     }
+        .table table, .table table tr, .table table td{ 
+        display: block;
+    }  
+    .table table tr:first-child{ 
+        display: none; 
+    }
+    .table table td:first-child{
+        display: none;
+    }
+    .table table{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .emptable table td:nth-child(n+1):before{color: #003d66;}
+    .emptable table td:nth-child(2):before {content:'Ime : ';}
+    .emptable table td:nth-child(3):before {content:'Prezime : ';}
+    .emptable table td:nth-child(4):before {content:'Email: ';}
+    .emptable table td:nth-child(5):before {content:'Broj telefona: ';}
+    .emptable table td:nth-child(6):before {content:'Broj kancelarije: ';}
+    .emptable table td:nth-child(7):before {content:'Organizaciona jedinica : ';}
+    .emptable table td:nth-child(8):before {content:'';}
+    .emptable table td:last-child{ 
+        text-align: left;
+    }
+
+    .equtable table td:nth-child(n+1):before{color: #003d66;}
+    .equtable table td:nth-child(2):before {content:'Tip opreme : ';}
+    .equtable table td:nth-child(3):before {content:'Proizvođač opreme : ';}
+    .equtable table td:nth-child(4):before {content:'Inventurni broj : ';}
+    .equtable table td:nth-child(5):before {content:'Serijski broj : ';}
+    .equtable table td:nth-child(6):before {content:'Status opreme : ';}
+    .equtable table td:nth-child(7):before {content:'Ime osobe : ';}
+    .equtable table td:nth-child(8):before {content:'Prezime osobe : ';}
+    .equtable table td:nth-child(9):before {content:'Datum zaduženja : ';}
+    .equtable table td:nth-child(10):before {content:'';}
+    .equtable table td:last-child{ 
+        text-align: left;
+    }
+
+    .equipemp table td:nth-child(n+1):before{color: #003d66;}
+    .equipemp table td:nth-child(2):before {content:'Tip opreme : ';}
+    .equipemp table td:nth-child(3):before {content:'Proizvođač opreme : ';}
+    .equipemp table td:nth-child(4):before {content:'Inventurni broj : ';}
+    .equipemp table td:nth-child(5):before {content:'Serijski broj : ';}
+    .equtable table td:nth-child(6):before {content:'';}
+    .equtable table td:last-child{ 
+        text-align: left;
+    }
+
+    .equiptype table td:nth-child(n+1):before{color: #003d66;}
+    .equiptype table td:nth-child(2):before {content:'Tip opreme : ';}
+    .equiptype table td:last-child{ 
+        text-align: center;
+    }
+
+    .equipproducer table td:nth-child(n+1):before{color: #003d66;}
+    .equipproducer table td:nth-child(2):before {content:'Proizvođač opreme : ';}
+    .equipproducer table td:last-child{ 
+        text-align: center;
+    }
+
+    .office table td:nth-child(n+1):before{color: #003d66;}
+    .office table td:nth-child(2):before {content:'Broj kancelarije : ';}
+    .office table td:last-child{ 
+        text-align: center;
+    }
+
+    .organization table td:nth-child(n+1):before{color: #003d66;}
+    .organization table td:nth-child(2):before {content:'Organizaciona jedinica : ';}
+    .organization table td:last-child{ 
+        text-align: center;
+    }
+
+    .users table td:nth-child(n+1):before{color: #003d66;}
+    .users table td:nth-child(2):before {content:'Ime : ';}
+    .users table td:nth-child(3):before {content:'Prezime : ';}
+    .users table td:nth-child(4):before {content:'Korisničko ime : ';}
+    .users table td:last-child{ 
+        text-align: center;
+    }
+    
+    .top-footer{
+        flex-direction: column;
+    }
+
+    .main-navigation {
+		position: relative;
+		min-height: 40px;
+	}	
+	.main-navigation ul {
+		width: 100%;
+		background:url('../images/hamburger.png') no-repeat;
+	}
+	.main-navigation li {
+		display: none;
+    }
+    .main-navigation ul.logout {
+        background:none;
+    }
+    .main-navigation .logout li {
+        display: block;
+        padding: 0.8em 2em;
+        vertical-align: middle;
+    }
+	.main-navigation ul:hover li {
+        display: block;
+    }
+    .main-navigation ul:hover{
+        background: none;
+    }
+}
+
+/*FOOTER*/
+.main-footer{
+    padding-top:2%;
+    display: flex;
+    flex-direction: column;
+}
+.top-footer{
+    display: flex;
+    padding: 1em;
+    font-size: 0.9em;
+}
+.item{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    text-align: center;
+    border: 1px solid #cccccc;
+    border-bottom: 3px solid #003d66;
+    margin: 0.1em 1em;
+    padding: 1%;
+}
+
+.top-footer div a, .top-footer div span .top-footer div p{
+    color: #001f33;
+}
+.top-footer div p{
+    text-transform: uppercase;
+}
+.top-footer div img{
+    vertical-align: middle;
+    max-width: 4%;
+}
+.footer{
+    text-transform: none;
+    color: #000000;
+    font-size: 0.8em;
+}
+
+/*MODAL*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top:3%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+}
+  
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 1%;
+    width: 90%;
+}
+
+.modsize{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.pmodal{
+    padding: 7%;
+    border: 1px solid #cccccc;
+}
+
+/* Button - modal closing */
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 7%;
+    margin-top: 1%;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #cccccc;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+/*Message - Deleting*/
+#message, #messageProducer, #messageOrganization {
+    visibility: hidden; 
+    left: 0;
+    top: 0;
+    background-color: #ff704d; 
+    color: #000;
+    text-align: center; 
+    padding: 0.3%; 
+    position: fixed; 
+    z-index: 1;
+    width: 100%;
+    height: 4%;
+  }
+  
+#message.show, #messageProducer.show, #messageOrganization.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  } 
+
+/*Paging*/
+.paginationControls{
+    text-align: center;
+    padding-top: 1%;
+}
+.btnPage{
+    margin-right:10px;
+    padding:5px 10px; 
+    border: #CCC 1px solid; 
+    background:#FFF; 
+    border-radius:4px;}
+.btnPage:hover{
+    background:#F0F0F0;
+}
+
+/*Reports*/
+div.free{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid #cccccc;
+    margin: 1em;
+    padding: 1em;
+    font-size: 0.9em;
+}
+div.free a{
+    width: 100%;
+    text-align: center;
+}
+
+/*Accordion*/
+input.checkTab {
+    position: absolute;
+    z-index: -1;
+    margin: 0 1%;
+  }
+.tab {
+    color: #ffffff;
+    overflow: hidden;
+    margin: 0 1%;
+    font-size: 0.9em;
+}
+.tab:first-child{
+    margin-top: 2%;
+}
+.tabLabel {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 0.5em;
+    background: #005c99;
+}
+.tabLabel:hover {
+    background: #004d80;
+}
+.tabLabel::after {
+    content: "\25b6";/*https://mcdlr.com/8/*/
+    transition: all 0.35s;
+}
+.tabContent {
+    max-height: 0;
+    padding: 0 1em;
+    color: #000000;
+    background: #ffffff;
+    transition: all 0.35s;
+}
+input.checkTab:checked + .tabLabel {
+    background: #004d80;
+}
+input.checkTab:checked + .tabLabel::after {
+    transform: rotate(90deg);
+}
+input.checkTab:checked ~ .tabContent {
+    max-height: 100%;
+    padding: 1em;
+}
